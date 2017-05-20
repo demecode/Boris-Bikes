@@ -1,6 +1,7 @@
 class DockingStation
 
 	def initialize
+		@capacity = 10
 		@bikes = []
 	end 
 
@@ -15,6 +16,10 @@ class DockingStation
 	def release(bike)
 		@bikes.delete(bike)
 	end 
-	
+
+	def full?
+		@capacity <= bike_count
+	end 
+
 
 end
