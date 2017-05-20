@@ -4,7 +4,7 @@ class ContainerHolder
 
 	include BikeContainer
 
-end  
+end
 
 describe BikeContainer do
 
@@ -19,4 +19,4 @@ describe BikeContainer do
 		#now holder should have 1 bike
 		expect(holder.bike_count).to eq(1)
 	end
-end 
+end

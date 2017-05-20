@@ -1,13 +1,14 @@
 class Bike
 
-def initialize 
+def initialize
+  puts "hello world"
 	#instance variable which is available on all methods below
 	fix
-end 
+end
 
 def working?
 	@working
-end 
+end
 
 
 def break
@@ -16,8 +17,8 @@ end
 
 def fix
 	@working = true
-end 
+end
 
 
 
-end 
+end
