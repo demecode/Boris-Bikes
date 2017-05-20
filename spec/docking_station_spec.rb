@@ -47,6 +47,18 @@ describe DockingStation do
 	end 
 
 
+		it "should return true if avaiable bikes are working" do 
+		working_bike = Bike.new
+		broken_bike = Bike.new
+		station = DockingStation.new
+		broken_bike.break
+		station.dock(working_bike)
+		station.dock(broken_bike)
+		expect(station.available_bikes).to eq [working_bike]
+
+	end 
+
+
 
 
 end
