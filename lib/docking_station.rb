@@ -9,16 +9,26 @@ class DockingStation
 		@bikes.count
 	end 
 
-	def dock(bike)
-		@bikes << bike
+	def dock(bike)		
+		if full?		
+			raise "hello world" 
+		else
+			@bikes << bike		
+		end
 	end 
 
 	def release(bike)
-		@bikes.delete(bike)
+		if bike.working?
+			@bikes.delete(bike)
+			true
+		else
+			false
+		end
+
 	end 
 
 	def full?
-		@capacity <= bike_count
+		@capacity == bike_count
 	end 
 
 
