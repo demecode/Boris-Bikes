@@ -49,7 +49,7 @@ describe DockingStation do
 	end 
 
 
-		it "should return true if avaiable bikes are working" do 
+		it "should return a list of working bikes if avaiable bikes are working" do 
 		working_bike = Bike.new
 		broken_bike = Bike.new
 		station = DockingStation.new
