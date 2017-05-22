@@ -1,4 +1,5 @@
 require_relative "../lib/garage"
+require_relative "../lib/bike_container"
 
 describe Garage do
 
@@ -9,7 +10,7 @@ describe Garage do
     #expect garage to be empty
     expect(garage.bike_count).to eq (0)
     #lets dock a bike in
-    garage.dock(bike)
+    garage.accept(bike)
     #we now expect garage to have 1 bike
     expect(garage.bike_count).to eq (1)
   end
