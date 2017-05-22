@@ -2,6 +2,8 @@ require_relative "../lib/docking_station"
 
 describe DockingStation do
 
+	let(:station) {DockingStation.new(:capacity => 10)}
+
 	it "should accept a bike" do
 		bike = Bike.new
 		station = DockingStation.new
@@ -29,14 +31,14 @@ describe DockingStation do
 		expect(station.full?).to eq false 
 	end
 
-	xit "shouldn't dock a bike if the capacity is full" do 
+	it "shouldn't dock a bike if the capacity is full" do 
 		station = DockingStation.new 
 		10.times{station.dock(Bike.new)}
 
 
 		bike = Bike.new
 		puts "hello world"
-		expect(station.dock(bike)).to raise("hello world")
+		expect(station.dock(bike)).to raise ("hello world")
 	end 
 
 	it "shouldn't release a bike if it's broken" do
