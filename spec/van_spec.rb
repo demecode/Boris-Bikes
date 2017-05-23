@@ -1,5 +1,4 @@
 require_relative "../lib/van"
-require_relative "../lib/bike_container"
 
 describe Van do
 
