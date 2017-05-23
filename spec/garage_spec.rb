@@ -1,5 +1,4 @@
 require_relative "../lib/garage"
-require_relative "../lib/bike_container"
 
 describe Garage do
 
