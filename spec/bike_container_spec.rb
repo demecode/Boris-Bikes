@@ -15,10 +15,14 @@ describe BikeContainer do
 	end
 
   it "should release a bike only if bikes available" do
-    holder.available_bikes
-    expect(holder.available_bikes).to eq []
-    holder.release(bike)
-    expect(holder.available_bikes).to eq []
+    working_bike = Bike.new
+    broken_bike = Bike.new
+    broken_bike.break
+    holder.dock(working_bike)
+    holder.dock(broken_bike)
+    expect(holder.available_bikes).to eq [working_bike]
+    holder.release(working_bike)
+    expect(holder.bike_count).to eq 1
     end
 
 end
