@@ -22,13 +22,13 @@ module BikeContainer
 		if full?
 			raise "hello world"
 		else
-			@bikes << bike
+			bikes << bike
 		end
 	end
 
 	def release(bike)
-		if bike.working?
-			@bikes.delete(bike)
+		if available_bikes
+			bikes.delete(bike)
 			true
 		else
 			false
@@ -41,7 +41,7 @@ module BikeContainer
 	end
 
 	def available_bikes
-			@bikes.reject {|bike| bike.broken?}
+			bikes.reject {|bike| bike.broken?}
 	end
 
 	def accept(bike)
