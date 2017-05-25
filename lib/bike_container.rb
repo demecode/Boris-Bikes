@@ -21,11 +21,9 @@ module BikeContainer
 	def dock(bike)
 		if full?
 			raise "error"
-		elsif
+		else
 			bikes << bike
 		end
-	else
-		false
 	end
 
 	def release(bike)
