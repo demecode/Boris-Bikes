@@ -31,9 +31,8 @@ module BikeContainer
 			bikes.delete(bike)
 			true
 		else
-			false
+			raise "error"
 		end
-
 	end
 
 	def full?
@@ -55,10 +54,7 @@ module BikeContainer
 	end
 
 	def empty?
-		if bike_count == 0
-			true
-		end
+		bike_count == 0
 	end
-
 
 end

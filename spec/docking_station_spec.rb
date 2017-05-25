@@ -14,17 +14,17 @@ describe DockingStation do
     expect(station.bike_count).to eq (1)
     station.release(bike)
     expect(station.bike_count).to eq (0)
-    station.empty?
     expect(station.empty?).to eq true
   end
 
   it "shouldn't release a bike if the capacity is empty" do
-    station = DockingStation.new
     station.empty?
     expect(station.bike_count).to eq (0)
     bike = Bike.new
-    expect(station.release(bike)).to raise ("error")
+    expect(station.release(bike)).to raise "error"
 end
+
+
 
 
 end
