@@ -55,7 +55,9 @@ module BikeContainer
 	end
 
 	def empty?
-		bike_count == 0
+		if bike_count == 0
+			true
+		end
 	end
 
 

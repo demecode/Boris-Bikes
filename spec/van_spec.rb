@@ -51,5 +51,12 @@ describe Van do
     expect(van.bike_count).to eq 0
   end
 
+  it "shoudn't release a bike if there isn't any bikes" do
+    van.full?
+    expect(van.bike_count).to eq (0)
+
+  end
+
+
 
 end
