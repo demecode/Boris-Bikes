@@ -6,6 +6,11 @@ describe DockingStation do
 
 	it "should allow setting default capacity on initialising" do
 		expect(station.capacity).to eq (101)
-	end 
+	end
+
+  it "should return 0 if no bikes  you when the its empty" do
+    station.empty
+    expect(station.bike_count).to eq (0)
+  end
 
 end

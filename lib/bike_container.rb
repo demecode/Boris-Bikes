@@ -20,9 +20,11 @@ module BikeContainer
 
 	def dock(bike)
 		if full?
-			raise "hello world"
-		else
+			raise "Error"
+		elsif
 			bikes << bike
+		else
+			raise "Error"
 		end
 	end
 
@@ -48,6 +50,11 @@ module BikeContainer
 		bike.fix
 		dock(bike)
 	end
+
+	def empty
+		bike_count == 0
+	end
+
 
 
 

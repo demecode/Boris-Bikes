@@ -14,7 +14,7 @@ describe BikeContainer do
 		expect(holder.bike_count).to eq (1)
 	end
 
-  it "should release a bike only if bikes available" do
+  it "should release a bike only if bikes are available" do
     working_bike = Bike.new
     broken_bike = Bike.new
     broken_bike.break
@@ -22,7 +22,7 @@ describe BikeContainer do
     holder.dock(broken_bike)
     expect(holder.available_bikes).to eq [working_bike]
     holder.release(working_bike)
-    expect(holder.bike_count).to eq 1
+    expect(holder.bike_count).to eq (1)
     end
 
 end
