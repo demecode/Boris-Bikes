@@ -33,4 +33,23 @@ describe Van do
     expect(garage.bike_count).to eq (1)
   end
 
+  it "should return a list of broken bikes" do
+    working_bike = Bike.new
+    broken_bike = Bike.new
+    broken_bike.break
+    van.dock(working_bike)
+    van.dock(broken_bike)
+    expect(van.not_available_bikes).to eq [broken_bike]
+  end
+
+  it "should be able to release a broken bike" do
+    broken_bike = Bike.new
+    broken_bike.break
+    van.dock(broken_bike)
+    expect(van.bike_count).to eq 1
+    van.release(broken_bike)
+    expect(van.bike_count).to eq 0
+  end
+
+
 end

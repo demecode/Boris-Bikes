@@ -37,12 +37,17 @@ module BikeContainer
 	end
 
 	def full?
-		bike_count == @capacity
+			bike_count == @capacity
 	end
 
 	def available_bikes
-			@bikes.reject {|bike| bike.broken?}
+		bikes.reject {|bike| bike.broken?}
 	end
+
+	def not_available_bikes
+		bikes.reject {|bike| bike.working?}
+	end
+
 
 	def accept(bike)
 		bike.fix
