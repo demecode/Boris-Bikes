@@ -57,4 +57,9 @@ module BikeContainer
 		bike_count == 0
 	end
 
+	def move(bike)
+		bike.break
+		release(bike)
+	end
+
 end

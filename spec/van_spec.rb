@@ -51,6 +51,12 @@ describe Van do
     expect(van.bike_count).to eq 0
   end
 
+  it "should break a bike and then release it" do
+    station.dock(bike)
+    station.move(bike)
+    expect(station.bike_count).to eq (0)
+  end
+
 
 
 end
